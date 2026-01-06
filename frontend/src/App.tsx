@@ -57,6 +57,12 @@ function App() {
   };
 
   const loadHistory = async (sessionId: string) => {
+    // Don't fetch if session ID is empty
+    if (!sessionId) {
+      setMessages([]);
+      return;
+    }
+
     try {
       const response = await fetch(`/api/history/${sessionId}`);
       const data = await response.json();
