@@ -1,0 +1,11 @@
+{
+  "name": "chatgpt-langchain-app",
+  "version": "1.0.0",
+  "description": "ChatGPT-style interface with LangChain backend",
+  "scripts": {
+    "start": "concurrently -n \"BACKEND,FRONTEND\" -c \"cyan,magenta\" \"cd backend && npm run dev\" \"cd frontend && npm run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

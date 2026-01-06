@@ -1,0 +1,35 @@
+Exercise: Build a Custom ChatGPT Web App
+Goal
+Create a full-stack chat application where a user can send messages through a React frontend, which are routed to an Express backend. The backend calls the ChatGPT API, stores the conversation in a database, and returns the assistant’s reply to be displayed in the frontend.
+
+Part 1: Backend (Express + Database)
+Set up a new Express project.
+Configure it to:
+
+Accept JSON requests.
+Handle CORS so the frontend can connect.
+Add an endpoint to:
+
+Accept a user message.
+Call the ChatGPT API using your API key.
+Save both the user message and assistant response into a database.
+Return the assistant response as JSON.
+Add another endpoint that allows the frontend to fetch the full conversation history from the database.
+Use a simple relational database (e.g., SQLite or PostgreSQL) with a messages table.
+Part 2: Frontend (React)
+Create a React project for the chat UI.
+Build a simple chat interface with:
+
+A message list showing both user and assistant messages.
+An input field for typing messages.
+A button to send a message.
+When the user submits a message:
+
+Send it to the backend’s chat endpoint.
+Append the user’s message to the chat window immediately.
+Display the assistant’s reply once it’s received.
+On page load, fetch the entire conversation history from the backend and display it in the chat window.
+Part 3: Extension Challenges
+Add streaming responses from the backend so that messages appear word-by-word (typing effect).
+Add support for multiple chat sessions by introducing a session_id.
+Implement LangChain in your ChatGPT UI Project and wrap all of the api requests with LangChain.
